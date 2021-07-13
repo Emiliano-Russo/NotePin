@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Zen+Loop&display=swap");
+
+body {
+	background-color: black;
+	color: white;
+}
+
+html,
+body,
+button,
+input,
+textarea {
+	font-family: "Oxygen", sans-serif;
+	font-size: 20px;
+}
+
+.App {
+	text-align: center;
+}
+button {
+	border-radius: 11px;
+	border: 1px solid black;
+}
+
+button:hover {
+	cursor: pointer;
+	background-color: greenyellow;
+}
+
+input {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	text-align: center;
+}
+
+textarea {
+	background-color: transparent;
+	color: white;
+	border: 1px solid white;
+	max-width: 25rem;
+	min-height: 10rem;
+	max-height: 10rem;
+}
+
+#delete {
+	background-color: crimson;
+}

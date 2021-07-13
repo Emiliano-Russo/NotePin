@@ -1,0 +1,24 @@
+.noteList {
+	border: 1px solid white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.5rem;
+	overflow-y: scroll;
+	height: 25rem;
+	width: 15rem;
+}
+
+.noteList button {
+	padding: 0.3rem;
+	margin: 0.5rem;
+	width: 80%;
+	border: transparent;
+	background-color: royalblue;
+	color: white;
+}
+
+.noteList button:hover {
+	background-color: slateblue;
+	color: white;
+}
