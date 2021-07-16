@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@700&family=Zen+Loop&display=swap");
 
+html,
 body {
-	background-color: black;
+	background: #74ebd5; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #acb6e5, #74ebd5); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #acb6e5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 	color: white;
 }
 
@@ -24,7 +27,7 @@ button {
 
 button:hover {
 	cursor: pointer;
-	background-color: greenyellow;
+	background-color: whitesmoke;
 }
 
 input {
@@ -44,5 +47,5 @@ textarea {
 }
 
 #delete {
-	background-color: crimson;
+	background-color: lightcoral;
 }

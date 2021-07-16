@@ -1,24 +1,55 @@
 .noteList {
 	border: 1px solid white;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
 	padding: 0.5rem;
 	overflow-y: scroll;
-	height: 25rem;
+	height: 20rem;
 	width: 15rem;
 }
 
 .noteList button {
 	padding: 0.3rem;
 	margin: 0.5rem;
-	width: 80%;
-	border: transparent;
 	background-color: royalblue;
 	color: white;
+	border-color: 5px solid crimson;
 }
 
-.noteList button:hover {
-	background-color: slateblue;
-	color: white;
+.noteList button p {
+	overflow-x: hidden;
+}
+
+.note {
+	border: none;
+}
+
+.note:hover {
+	border: 2px solid white;
+	transition: 0.3s;
+}
+
+@media screen and (orientation: landscape) {
+	.noteList {
+		flex-direction: row;
+		width: 90%;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.noteList button {
+		max-width: 10rem;
+		max-height: 8rem;
+		overflow-y: hidden;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.noteList {
+		flex-direction: column;
+		width: 90%;
+	}
+
+	.noteList p {
+		overflow-x: hidden;
+	}
 }

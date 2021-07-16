@@ -11,6 +11,7 @@ class NoteSystem extends Component {
 		this.state = {
 			CurrentNoteTitle: "",
 			CurrentNoteContent: "",
+			CurrentBgColor: "#da9100",
 			AllNotes: RepoNoteList,
 			ShowingNoteList: true,
 		};
@@ -40,6 +41,7 @@ class NoteSystem extends Component {
 			const newNote = {
 				Title: note.Title,
 				Content: note.Content,
+				bgColor: note.bgColor,
 			};
 			ArrayNotes.push(newNote);
 			this.setState({
@@ -59,6 +61,7 @@ class NoteSystem extends Component {
 			this.setState({
 				CurrentNoteTitle: NoteSelected.Title,
 				CurrentNoteContent: NoteSelected.Content,
+				CurrentBgColor: NoteSelected.bgColor,
 			});
 		} else {
 			alert("that note does not exist");
@@ -78,6 +81,7 @@ class NoteSystem extends Component {
 			});
 			DeleteNote(note);
 		}
+		this.SetShowNote(true);
 	}
 
 	SetShowNote(bool) {
@@ -101,16 +105,30 @@ class NoteSystem extends Component {
 		const jsx = (
 			<React.Fragment>
 				<header className={Styles.header}>
-					<h1>Note Pin</h1>
-					<button onClick={() => this.HanldeChange()}>{this.state.ShowingNoteList ? "New Note" : "Show List"}</button>
+					<button
+						onClick={() => {
+							this.setState({
+								ShowingNoteList: true,
+							});
+						}}
+					>
+						<h1>Note Pin</h1>
+					</button>
 				</header>
 				<main className={Styles.main}>
 					{this.state.ShowingNoteList ? (
 						<NoteList noteList={this.state.AllNotes} onSelect={this.SelectNoteHandler.bind(this)} />
 					) : (
-						<NoteCreator onDelete={this.DeleteNoteHanlder.bind(this)} onSave={this.SaveNoteHanlder.bind(this)} title={this.state.CurrentNoteTitle} content={this.state.CurrentNoteContent} />
+						<NoteCreator
+							onDelete={this.DeleteNoteHanlder.bind(this)}
+							onSave={this.SaveNoteHanlder.bind(this)}
+							title={this.state.CurrentNoteTitle}
+							content={this.state.CurrentNoteContent}
+							bgColor={this.state.CurrentBgColor}
+						/>
 					)}
 				</main>
+				<footer className={Styles.footer}>{this.state.ShowingNoteList ? <button onClick={() => this.HanldeChange()}>+</button> : null}</footer>
 			</React.Fragment>
 		);
 		return jsx;

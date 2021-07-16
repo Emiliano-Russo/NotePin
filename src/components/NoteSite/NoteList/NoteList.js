@@ -2,9 +2,11 @@ import Styles from "./NoteList.module.css";
 
 const NoteList = (props) => {
 	function ConvertNote(note) {
+		console.log("color note: " + note.bgColor);
 		const jsx = (
-			<button key={note.Title} onClick={() => props.onSelect(note.Title)}>
-				{note.Title}
+			<button className={Styles.note} id="Note" key={note.Title} style={{ backgroundColor: note.bgColor }} onClick={() => props.onSelect(note.Title)}>
+				<p style={{ textDecoration: "underline" }}>{note.Title}</p>
+				<p>{note.Content}</p>
 			</button>
 		);
 		return jsx;
