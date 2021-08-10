@@ -128,7 +128,7 @@ class NoteSystem extends Component {
 						/>
 					)}
 				</main>
-				<footer className={Styles.footer}>{this.state.ShowingNoteList ? <button onClick={() => this.HanldeChange()}>+</button> : null}</footer>
+				<footer className={Styles.footer}>{this.state.ShowingNoteList ? <button onClick={() => this.HanldeChange()}>New Note</button> : null}</footer>
 			</React.Fragment>
 		);
 		return jsx;

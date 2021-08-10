@@ -17,21 +17,23 @@
 	background-color: transparent;
 	border: none;
 	color: whitesmoke;
-	text-decoration: underline white;
+	text-decoration: underline transparent;
 }
 
 .header button:hover {
-	text-decoration: underline royalblue;
+	transition: 0.3s;
+	text-decoration: underline rgb(3, 212, 240);
 }
 
 .footer button {
-	border-radius: 5px;
+	border-radius: 100px;
+	border: none;
 	text-align: center;
 	padding: 15px 32px;
 }
 
 .footer button:hover {
-	transition: 1s;
+	transition: 0.2s;
 	background: lightcyan;
 }
 

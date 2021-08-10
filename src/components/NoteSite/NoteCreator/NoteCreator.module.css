@@ -24,6 +24,7 @@ textarea::placeholder {
 .NoteCreator button {
 	width: 5rem;
 	margin: 0.2rem auto;
+	border: 1px solid transparent;
 }
 
 .NoteCreator button:hover {
