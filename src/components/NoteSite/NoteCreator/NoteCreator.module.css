@@ -50,7 +50,7 @@ textarea::placeholder {
 }
 
 .TickButton {
-	font-size: 24px;
+	font-size: 26px;
 	color: rgb(255, 255, 255);
 }
 
@@ -60,6 +60,7 @@ textarea::placeholder {
 }
 
 .DeleteButton {
+	font-size: 30px;
 	color: rgb(255, 255, 255);
 }
 

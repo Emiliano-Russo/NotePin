@@ -49,7 +49,7 @@ const NoteCreator = (props) => {
 					✓
 				</button>
 				<button className={Styles.DeleteButton} onClick={() => RemoveNote()}>
-					X
+					🗑
 				</button>
 			</div>
 		</div>
