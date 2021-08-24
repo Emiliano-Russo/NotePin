@@ -6,6 +6,7 @@
 	height: 20rem;
 	width: 15rem;
 	box-shadow: rgba(0, 0, 0, 0.24) 2px 3px 8px;
+	background: repeating-linear-gradient(-55deg, transparent, transparent 10px, #30303017 10px, #30303017 20px);
 }
 
 .noteList button {

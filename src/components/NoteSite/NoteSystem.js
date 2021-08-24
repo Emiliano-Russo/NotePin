@@ -3,6 +3,8 @@ import NoteList from "./NoteList/NoteList";
 import NoteCreator from "./NoteCreator/NoteCreator";
 import { SaveNote, GetAllNotes, DeleteNote } from "../../Repo";
 import Styles from "./NoteSystem.module.css";
+import "./NoteSystem.css";
+import ModalMenu from "../UtilityMenus/ModalMenu/ModalMenu";
 
 class NoteSystem extends Component {
 	constructor() {
@@ -101,6 +103,10 @@ class NoteSystem extends Component {
 		}
 	}
 
+	changeThemeHandler() {
+		console.log("theme changed");
+	}
+
 	render() {
 		const jsx = (
 			<React.Fragment>
@@ -112,9 +118,10 @@ class NoteSystem extends Component {
 							});
 						}}
 					>
-						<h1>Note Pin</h1>
+						<h1>Note Pin ✍</h1>
 					</button>
 				</header>
+
 				<main className={Styles.main}>
 					{this.state.ShowingNoteList ? (
 						<NoteList noteList={this.state.AllNotes} onSelect={this.SelectNoteHandler.bind(this)} />
@@ -133,6 +140,7 @@ class NoteSystem extends Component {
 		);
 		return jsx;
 	}
+	//<button class="button button--skoll"><span><span>Add</span></span></button>
 }
 
 export default NoteSystem;

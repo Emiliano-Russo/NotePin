@@ -42,12 +42,16 @@ const NoteCreator = (props) => {
 				<button style={{ backgroundColor: "#4169e1" }} onClick={() => changeColorsHanlder("#4169e1")}></button>
 				<button style={{ backgroundColor: "#EA3C53" }} onClick={() => changeColorsHanlder("#EA3C53")}></button>
 				<button style={{ backgroundColor: "#74c365" }} onClick={() => changeColorsHanlder("#74c365")}></button>
-				<button style={{ backgroundColor: "#da9100" }} onClick={() => changeColorsHanlder("#da9100")}></button>
+				<button style={{ backgroundColor: "#f5984f" }} onClick={() => changeColorsHanlder("#f5984f")}></button>
 			</div>
-			<button onClick={() => SaveNote()}>Save</button>
-			<button id="delete" onClick={() => RemoveNote()}>
-				Delete
-			</button>
+			<div className={Styles.Holder}>
+				<button className={Styles.TickButton} onClick={() => SaveNote()}>
+					✓
+				</button>
+				<button className={Styles.DeleteButton} onClick={() => RemoveNote()}>
+					X
+				</button>
+			</div>
 		</div>
 	);
 	return jsx;

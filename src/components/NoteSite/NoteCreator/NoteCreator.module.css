@@ -21,17 +21,49 @@ textarea::placeholder {
 	margin-bottom: 1rem;
 }
 
-.NoteCreator button {
-	width: 5rem;
-	margin: 0.2rem auto;
-	border: 1px solid transparent;
-}
-
-.NoteCreator button:hover {
-	border: 1px solid white;
+.NoteCreator .ButtonColors * {
+	background-color: black;
+	margin: 0 0.2rem;
 }
 
 .ButtonColors button {
-	width: 50px;
+	width: 35px;
 	height: 20px;
+}
+
+.NoteCreator button {
+	min-width: 1.2rem;
+	border: none;
+	background-color: transparent;
+}
+
+.NoteCreator .ButtonColors button:hover {
+	border: 1px solid white;
+}
+
+.Holder {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	border-top: 1px solid white;
+}
+
+.TickButton {
+	font-size: 24px;
+	color: rgb(255, 255, 255);
+}
+
+.TickButton:hover {
+	transition: 300ms;
+	color: greenyellow;
+}
+
+.DeleteButton {
+	color: rgb(255, 255, 255);
+}
+
+.DeleteButton:hover {
+	transition: 300ms;
+	color: rgb(238, 74, 106);
 }
